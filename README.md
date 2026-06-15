@@ -41,5 +41,5 @@ Since this is a client-side web application built with vanilla technologies, no 
 
 ## 📝 Analysis & Documentation
 Two detailed analysis reports are available in the repository root to outline the design choices and improvements - 
-1.  [**NGO Website Feature Highlight Report.pdf**](./NGO%20Website%20Feature%20Highlight%20Report.pdf) - Outlines layout structures, accessibility features, and responsiveness considerations.
+1.  [**NGO Website Feature Highlight Report.pdf**](./NGO%20Website%20Feature%20Highlight%20Report.pdf) - Outlines layout structures, accessibility features and responsiveness considerations.
 2.  [**Website Improvement Analysis Report.pdf**](./Website%20Improvement%20Analysis%20Report.pdf) - Details original web issues (poor visual hierarchy, lack of visual breathing room, lack of responsive grids) and discusses how this redesign solves each issue.
