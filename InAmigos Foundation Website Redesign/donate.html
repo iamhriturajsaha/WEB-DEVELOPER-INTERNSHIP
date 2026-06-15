@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate | InAmigos Foundation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="ambient-background">
+        <div class="glow-orb glow-orb-1" style="background: rgba(251, 191, 36, 0.2);"></div>
+        <div class="glow-orb glow-orb-3" style="background: rgba(16, 185, 129, 0.2);"></div>
+    </div>
+
+    <nav class="navbar scrolled">
+        <div class="logo">
+            <span class="highlight">InAmigos</span> Foundation
+        </div>
+        <ul class="nav-links">
+            <li><a href="home.html">Back to Home</a></li>
+            <li><a href="volunteer.html" class="btn btn-secondary">Volunteer</a></li>
+        </ul>
+    </nav>
+
+    <div class="subpage-hero" style="padding-top: 10rem; padding-bottom: 4rem; text-align: center;">
+        <div class="section-container">
+            <h1 class="hero-title text-gradient">Fuel the Change</h1>
+            <p class="hero-subtitle" style="margin: 0 auto;">Your generosity enables us to feed the hungry, educate the young, and protect our environment.</p>
+        </div>
+    </div>
+
+    <div class="section-container" style="padding-top: 0; max-width: 800px;">
+        <div class="glass-panel" style="padding: 3rem;">
+            
+            <div style="display: flex; gap: 1rem; margin-bottom: 2rem;">
+                <div class="glass-panel amount-card" style="flex: 1; padding: 1.5rem; text-align: center; cursor: pointer; border-color: var(--accent-primary);" onclick="selectAmount(500, this)">
+                    <h3 style="font-size: 2rem;">₹500</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem;">Feeds a family for a day</p>
+                </div>
+                <div class="glass-panel amount-card" style="flex: 1; padding: 1.5rem; text-align: center; cursor: pointer; border-color: var(--border-glass);" onclick="selectAmount(1500, this)">
+                    <h3 style="font-size: 2rem;">₹1500</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem;">Sponsors a child's education</p>
+                </div>
+                <div class="glass-panel amount-card" style="flex: 1; padding: 1.5rem; text-align: center; cursor: pointer; border-color: var(--border-glass);" onclick="selectAmount(5000, this)">
+                    <h3 style="font-size: 2rem;">₹5000</h3>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem;">Plants 50 trees</p>
+                </div>
+            </div>
+
+            <form onsubmit="event.preventDefault(); alert('Redirecting to secure payment gateway...'); window.location.href='home.html';">
+                
+                <div class="form-group" style="margin-bottom: 1.5rem;">
+                    <label for="customAmount" class="form-label">Custom Amount (₹)</label>
+                    <input type="number" id="customAmount" class="form-control" placeholder="Enter amount">
+                </div>
+
+                <div class="form-group" style="margin-bottom: 1.5rem;">
+                    <label for="fund" class="form-label">Designate my gift to</label>
+                    <select id="fund" class="form-control">
+                        <option value="general">Where it's needed most (General Fund)</option>
+                        <option value="seva">Project SEVA (Hunger Relief)</option>
+                        <option value="bachpanshala">PROJECT BACHPANSHALA (Education)</option>
+                        <option value="udaan">Project UDAAN (Women's Empowerment)</option>
+                        <option value="prakriti">Project PRAKRITI (Environment)</option>
+                        <option value="jeev">Project JEEV (Animal Welfare)</option>
+                        <option value="vikas">Project VIKAS (Youth)</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-glow" style="width: 100%; padding: 1rem; font-size: 1.1rem; background: var(--accent-secondary); color: var(--bg-base);">Proceed to Payment</button>
+                <p style="text-align: center; margin-top: 1rem; color: var(--text-secondary); font-size: 0.85rem;">🔒 Secure 256-bit encrypted transaction.</p>
+            </form>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+    <script>
+        const customAmountInput = document.getElementById('customAmount');
+        
+        function selectAmount(amount, element) {
+            customAmountInput.value = amount;
+            updateCardSelection(element);
+        }
+        
+        function updateCardSelection(selectedCard) {
+            document.querySelectorAll('.amount-card').forEach(card => {
+                card.style.borderColor = 'var(--border-glass)';
+            });
+            if (selectedCard) {
+                selectedCard.style.borderColor = 'var(--accent-primary)';
+            }
+        }
+
+        customAmountInput.addEventListener('input', (e) => {
+            updateCardSelection(null);
+        });
+        
+        // Initial setup
+        customAmountInput.value = 500;
+    </script>
+</body>
+</html>

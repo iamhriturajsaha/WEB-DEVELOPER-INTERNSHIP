@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InAmigos Foundation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body { overflow: hidden; margin: 0; padding: 0; background: #000; animation: none !important; opacity: 1 !important; transform: none !important; height: 100vh; width: 100vw; }
+        .splash-slideshow {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            z-index: 1;
+        }
+        .splash-slide {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 2s ease-in-out, transform 10s linear;
+            transform: scale(1.05);
+        }
+        .splash-slide.active {
+            opacity: 0.5;
+            transform: scale(1);
+        }
+        .splash-overlay {
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.6);
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .animated-title-container {
+            position: relative;
+            height: 120px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .animated-title {
+            position: absolute;
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 800;
+            color: white;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            opacity: 0;
+            transition: opacity 1.5s ease, transform 1.5s ease;
+            transform: translateY(20px);
+        }
+        .animated-title.active {
+            opacity: 1;
+            transform: translateY(0);
+            text-shadow: 0 0 30px rgba(255,255,255,0.3);
+        }
+        .enter-btn {
+            margin-top: 4rem;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.3);
+            color: white;
+            padding: 1rem 3rem;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            cursor: pointer;
+            backdrop-filter: blur(10px);
+            transition: all 0.4s ease;
+            text-decoration: none;
+        }
+        .enter-btn:hover {
+            background: white;
+            color: black;
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(255,255,255,0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="splash-slideshow">
+        <div class="splash-slide active" style="background-image: url('images/hero_image_1780842011125.png');"></div>
+        <div class="splash-slide" style="background-image: url('images/project_seva_1780842024654.png');"></div>
+        <div class="splash-slide" style="background-image: url('images/project_prakriti_1780842083311.png');"></div>
+        <div class="splash-slide" style="background-image: url('images/project_udaan_1780842056657.png');"></div>
+    </div>
+
+    <div class="splash-overlay">
+        <div class="animated-title-container">
+            <div class="animated-title active">InAmigos Foundation</div>
+            <div class="animated-title">इनअमिगोस फाउंडेशन</div>
+        </div>
+        
+        <button class="enter-btn" onclick="transitionToPage('home.html')">Make a Change</button>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Slideshow logic
+        const slides = document.querySelectorAll('.splash-slide');
+        let currentSlide = 0;
+        
+        setInterval(() => {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }, 5000);
+
+        // Title Animation logic
+        const titles = document.querySelectorAll('.animated-title');
+        let currentTitle = 0;
+
+        setInterval(() => {
+            // Fade out current
+            titles[currentTitle].classList.remove('active');
+            
+            // Wait for fade out to finish (1.5s) before fading in the next one
+            setTimeout(() => {
+                currentTitle = (currentTitle + 1) % titles.length;
+                titles[currentTitle].classList.add('active');
+            }, 1500);
+            
+        }, 5000);
+    </script>
+</body>
+</html>

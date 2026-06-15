@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InAmigos Foundation | Empowering Communities</title>
+    <meta name="description" content="InAmigos Foundation is an NGO based in Bilaspur, working towards community empowerment, sustainable development, education, and animal welfare.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="ambient-background">
+        <div class="glow-orb glow-orb-1"></div>
+        <div class="glow-orb glow-orb-2"></div>
+        <div class="glow-orb glow-orb-3"></div>
+    </div>
+
+    <nav class="navbar" id="navbar">
+        <div class="logo">
+            <span class="highlight">InAmigos</span> Foundation
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">Mission</a></li>
+            <li><a href="#projects">Initiatives</a></li>
+            <li><a href="#impact">Impact</a></li>
+            <li><a href="volunteer.html" class="btn btn-primary">Join Us</a></li>
+        </ul>
+        <div class="mobile-menu-btn">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
+
+    <header id="home" class="hero section-container">
+        <div class="hero-content" data-reveal="up">
+            <div class="badge">Making a Difference</div>
+            <h1 class="hero-title">Empowering Communities,<br><span class="text-gradient">Transforming Lives.</span></h1>
+            <p class="hero-subtitle">Join us in our mission to drive profound social change across India through sustainable development and deep compassion.</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary btn-glow">Explore Initiatives</a>
+                <a href="#get-involved" class="btn btn-secondary">Support Our Cause</a>
+            </div>
+        </div>
+        <div class="hero-visual" data-reveal="left">
+            <div class="glass-panel main-image-panel">
+                <img src="images/hero_image_1780842011125.png" alt="Volunteers helping in community">
+            </div>
+            <div class="floating-card stat-card-float">
+                <div class="icon">✨</div>
+                <div>
+                    <h4>10k+</h4>
+                    <p>Lives Touched</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="about-section section-container">
+        <div class="about-grid">
+            <div class="about-text" data-reveal="right">
+                <h2 class="section-title">The Foundation</h2>
+                <p class="lead-text">Founded in 2020 by Govind Shukla in Bilaspur, Chhattisgarh, the <strong>InAmigos Foundation</strong> is driven by a singular vision: collective action for grassroots empowerment.</p>
+                <p>We believe in the immense power of empathy to bridge societal gaps. From ensuring food security and digital literacy to women's empowerment, animal welfare, and massive tree-planting drives, InAmigos represents positive, transparent, and lasting change.</p>
+            </div>
+            <div class="about-visual glass-panel" data-reveal="left">
+                <div class="core-values">
+                    <div class="value-item">
+                        <span class="value-number">01</span>
+                        <h4>Empathy First</h4>
+                    </div>
+                    <div class="value-item">
+                        <span class="value-number">02</span>
+                        <h4>Transparent Action</h4>
+                    </div>
+                    <div class="value-item">
+                        <span class="value-number">03</span>
+                        <h4>Sustainable Future</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section section-container">
+        <div class="section-header" data-reveal="up">
+            <h2 class="section-title">Our <span class="text-gradient">Initiatives</span></h2>
+            <p class="section-subtitle">Six core pillars of our commitment to society.</p>
+        </div>
+        
+        <div class="bento-grid">
+            <!-- Project SEVA -->
+            <div class="bento-item glass-panel" data-reveal="up" onclick="transitionToPage('project-seva.html')">
+                <img src="images/project_seva_1780842024654.png" alt="Project SEVA" class="bento-image">
+                <div class="bento-content">
+                    <div class="tag">Hunger Relief</div>
+                    <h3>Project SEVA</h3>
+                    <p>Distribution of essential food and clothing to underprivileged individuals and daily wage workers.</p>
+                </div>
+            </div>
+
+            <!-- PROJECT BACHPANSHALA -->
+            <div class="bento-item glass-panel" data-reveal="up" data-delay="100" onclick="transitionToPage('project-bachpanshala.html')">
+                <img src="images/project_bachpanshala_1780842038407.png" alt="PROJECT BACHPANSHALA" class="bento-image">
+                <div class="bento-content">
+                    <div class="tag">Education</div>
+                    <h3>PROJECT BACHPANSHALA</h3>
+                    <p>Bridging educational gaps through digital literacy.</p>
+                </div>
+            </div>
+
+            <!-- Project UDAAN -->
+            <div class="bento-item glass-panel" data-reveal="up" data-delay="200" onclick="transitionToPage('project-udaan.html')">
+                <img src="images/project_udaan_1780842056657.png" alt="Project UDAAN" class="bento-image">
+                <div class="bento-content">
+                    <div class="tag">Empowerment</div>
+                    <h3>Project UDAAN</h3>
+                    <p>Women's empowerment and financial independence.</p>
+                </div>
+            </div>
+
+            <!-- Project PRAKRITI -->
+            <div class="bento-item glass-panel" data-reveal="up" data-delay="100" onclick="transitionToPage('project-prakriti.html')">
+                <img src="images/project_prakriti_1780842083311.png" alt="Project PRAKRITI" class="bento-image">
+                <div class="bento-content">
+                    <div class="tag">Environment</div>
+                    <h3>Project PRAKRITI</h3>
+                    <p>Massive tree-planting drives for a sustainable and greener future.</p>
+                </div>
+            </div>
+
+            <!-- Project JEEV -->
+            <div class="bento-item glass-panel" data-reveal="up" data-delay="200" onclick="transitionToPage('project-jeev.html')">
+                <img src="images/project_jeev_1780842070531.png" alt="Project JEEV" class="bento-image">
+                <div class="bento-content">
+                    <div class="tag">Animal Welfare</div>
+                    <h3>Project JEEV</h3>
+                    <p>Rescuing and protecting stray animals.</p>
+                </div>
+            </div>
+
+            <!-- Project VIKAS -->
+            <div class="bento-item glass-panel" data-reveal="up" data-delay="300" onclick="transitionToPage('project-vikas.html')">
+                <img src="images/project_vikas_1780842098397.png" alt="Project VIKAS" class="bento-image">
+                <div class="bento-content">
+                    <div class="tag">Youth</div>
+                    <h3>Project VIKAS</h3>
+                    <p>Enhancing employability via internships.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="impact" class="impact-section section-container">
+        <div class="glass-panel impact-container" data-reveal="up">
+            <h2 class="section-title center">Quantifiable <span class="text-gradient">Impact</span></h2>
+            <div class="impact-stats">
+                <div class="stat-card">
+                    <h3 class="stat-number"><span class="counter" data-target="10000">0</span>+</h3>
+                    <p>Lives Impacted</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="stat-number"><span class="counter" data-target="6">0</span></h3>
+                    <p>Core Projects</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="stat-number"><span class="counter" data-target="5000">0</span>+</h3>
+                    <p>Active Volunteers</p>
+                </div>
+                <div class="stat-card">
+                    <h3 class="stat-number"><span class="counter" data-target="100">0</span>%</h3>
+                    <p>Commitment</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="get-involved" class="cta-section section-container" data-reveal="up">
+        <div class="glass-panel cta-panel">
+            <div class="glow-orb cta-glow"></div>
+            <h2>Ready to Make a Difference?</h2>
+            <p>Your contribution creates ripples of positive change. Volunteer your time or support our cause financially.</p>
+            <div class="cta-actions">
+                <button class="btn btn-primary btn-large btn-glow" onclick="transitionToPage('volunteer.html')">Volunteer Now</button>
+                <button class="btn btn-secondary btn-large" onclick="transitionToPage('donate.html')">Make a Donation</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content section-container">
+            <div class="footer-brand">
+                <h3><span class="highlight">InAmigos</span> Foundation</h3>
+                <p>Bringing smiles, empowering lives.</p>
+            </div>
+            <div class="footer-links" style="gap: 2rem;">
+                <div class="link-group">
+                    <h4>Organization</h4>
+                    <a href="#about">About Us</a>
+                    <a href="#impact">Impact</a>
+                </div>
+                <div class="link-group">
+                    <h4>Connect</h4>
+                    <a href="https://www.instagram.com/inamigos/" target="_blank">Instagram</a>
+                    <a href="https://in.linkedin.com/company/inamigos-foundation" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 InAmigos Foundation. All Rights Reserved. Crafted with passion.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
